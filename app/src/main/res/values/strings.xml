@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Moviex</string>
+    <string name="title_movies">Movies</string>
+    <string name="title_tvshows">Tv Shows</string>
+    <string name="change_language_settings">Change Language Settings</string>
+    <string name="watch_trailer">Watch Trailer</string>
+    <string name="photo_cover_film">Photo Cover Film</string>
+    <string name="photo_background">Photo Background</string>
+    <string name="icon_rating">Icon Rating</string>
+    <string name="title">Title :</string>
+    <string name="genre">Genre :</string>
+    <string name="rating">Rating :</string>
+    <string name="duration">Duration :</string>
+    <string name="synopsis">Synopsis :</string>
+    <string name="actors">Actors :</string>
+    <string name="directors">Directors :</string>
+    <string name="production">Production :</string>
+    <string name="release_date">Release Date :</string>
+    <string name="country">Country :</string>
+
+
+</resources>

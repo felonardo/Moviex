@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Moviex</string>
+    <string name="title_movies">Film</string>
+    <string name="title_tvshows">Acara Tv</string>
+    <string name="change_language_settings">Ubah bahasa</string>
+    <string name="watch_trailer">Tonton Trailer</string>
+    <string name="photo_cover_film">Photo Poster Film</string>
+    <string name="photo_background">Photo Latar</string>
+    <string name="icon_rating">Logo Rating</string>
+    <string name="title">Judul :</string>
+    <string name="genre">Aliran Film :</string>
+    <string name="rating">Penilaian :</string>
+    <string name="duration">Lama Film :</string>
+    <string name="synopsis">Sinopsis :</string>
+    <string name="actors">Aktor :</string>
+    <string name="directors">Sutradara :</string>
+    <string name="production">Produksi :</string>
+    <string name="release_date">Tanggal Rilis :</string>
+    <string name="country">Negara :</string>
+
+
+</resources>
