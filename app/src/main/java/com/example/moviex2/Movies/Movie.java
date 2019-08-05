@@ -2,6 +2,9 @@ package com.example.moviex2.Movies;
 
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.util.Log;
+
+import org.json.JSONObject;
 
 public class Movie implements Parcelable {
 
@@ -16,6 +19,15 @@ public class Movie implements Parcelable {
     private String production;
     private String releaseDate;
     private String country;
+    private int id;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getGenre() {
         return genre;
@@ -109,6 +121,32 @@ public class Movie implements Parcelable {
     public Movie() {
     }
 
+
+    public Movie(JSONObject object){
+        try{
+            String photo = object.getString("poster_path");
+            this.photo ="https://image.tmdb.org/t/p/original"+photo;
+            this.title = object.getString("title");
+            this.genre = object.getJSONArray("genre_ids").toString();
+            this.rating = object.getString("vote_average")+"/10";
+            this.duration = object.getString("original_language");
+            this.desc = object.getString("overview");
+            this.actors = object.getString("title");
+            this.directors =object.getString("original_language");
+            this.production = object.getString("title");
+            this.releaseDate = object.getString("release_date");
+            this.country = object.getString("original_language");
+            this.id = object.getInt("id");
+
+
+
+        } catch (Exception e){
+            e.printStackTrace();
+            Log.d("onFailure",e.getMessage());
+        }
+    }
+
+
     @Override
     public int describeContents() {
         return 0;
@@ -127,7 +165,7 @@ public class Movie implements Parcelable {
         dest.writeString(this.production);
         dest.writeString(this.releaseDate);
         dest.writeString(this.country);
-        dest.writeString(this.desc);
+        dest.writeInt(this.id);
     }
 
     protected Movie(Parcel in) {
@@ -142,7 +180,7 @@ public class Movie implements Parcelable {
         this.production = in.readString();
         this.releaseDate = in.readString();
         this.country = in.readString();
-        this.desc = in.readString();
+        this.id = in.readInt();
     }
 
     public static final Creator<Movie> CREATOR = new Creator<Movie>() {
@@ -156,6 +194,4 @@ public class Movie implements Parcelable {
             return new Movie[size];
         }
     };
-
-
 }

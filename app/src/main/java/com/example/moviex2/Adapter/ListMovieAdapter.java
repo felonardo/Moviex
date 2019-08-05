@@ -19,10 +19,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class ListMovieAdapter extends RecyclerView.Adapter<ListMovieAdapter.CategoryViewHolder> {
     private Context context;
-    private ArrayList<Movie> listMovie;
+    private ArrayList<Movie> listMovie= new ArrayList<>();
+
 
     public ListMovieAdapter(Context context) {
         this.context = context;
+    }
+
+    public ListMovieAdapter() {
+
     }
 
     public ArrayList<Movie> getListMovie() {
@@ -30,7 +35,11 @@ public class ListMovieAdapter extends RecyclerView.Adapter<ListMovieAdapter.Cate
     }
 
     public void setListMovie(ArrayList<Movie> listMovie) {
-        this.listMovie = listMovie;
+        this.listMovie.clear();
+        this.listMovie.addAll(listMovie);
+        notifyDataSetChanged();
+
+//        this.listMovie = listMovie;
     }
 
     @NonNull

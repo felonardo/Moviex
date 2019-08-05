@@ -1,8 +1,5 @@
 package com.example.moviex2.Movies;
 
-import java.util.ArrayList;
-
-
 public class Moviedata {
 
     public static String[][] data = new String[][]{
@@ -20,27 +17,27 @@ public class Moviedata {
 
     };
 
-    public static ArrayList<Movie> getListData() {
-        Movie movie = null;
-        ArrayList<Movie> list = new ArrayList<>();
-        for (String[] aData : data) {
-            movie = new Movie();
-            movie.setTitle(aData[0]);
-            movie.setGenre(aData[1]);
-            movie.setPhoto(aData[2]);
-            movie.setRating(aData[3]);
-            movie.setDuration(aData[4]);
-            movie.setActors(aData[5]);
-            movie.setDirectors(aData[6]);
-            movie.setProduction(aData[7]);
-            movie.setReleaseDate(aData[8]);
-            movie.setCountry(aData[9]);
-            movie.setDesc(aData[10]);
-
-            list.add(movie);
-        }
-
-        return list;
-    }
+//    public static ArrayList<Movie> getListData() {
+//        Movie movie = null;
+//        ArrayList<Movie> list = new ArrayList<>();
+//        for (String[] aData : data) {
+//            movie = new Movie();
+//            movie.setTitle(aData[0]);
+//            movie.setGenre(aData[1]);
+//            movie.setPhoto(aData[2]);
+//            movie.setRating(aData[3]);
+//            movie.setDuration(aData[4]);
+//            movie.setActors(aData[5]);
+//            movie.setDirectors(aData[6]);
+//            movie.setProduction(aData[7]);
+//            movie.setReleaseDate(aData[8]);
+//            movie.setCountry(aData[9]);
+//            movie.setDesc(aData[10]);
+//
+//            list.add(movie);
+//        }
+//
+//        return list;
+//    }
 }
 
